@@ -17,12 +17,10 @@ const getData = async () => {
   const data = await responce.json();
 
   return data;
-  // console.log(data)
 }
 
 const loadNewQuote = async (data) => {
   data = await getData()
-  console.log(data)
   adviceId.innerText = `ADVICE # ${data.slip.id}`
   adviceQuote.innerText = `"${data.slip.advice}"`
 }
